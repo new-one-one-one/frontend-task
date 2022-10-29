@@ -16,6 +16,7 @@ module.exports = {
     colors:{
       'blue':{
         400: "#2E90EA",
+        500: "#428BC1"
       },
       'white': {
         100: "#FFFFFF"
@@ -31,9 +32,14 @@ module.exports = {
     extend: {
       height:{
         "card":"30.938rem",
+        "category-img":"25rem",
+        "count-card":"17.688rem"
       },
       width:{
-        "card":"23.5rem"
+        "card":"23.5rem",
+        "category-img":"37rem",
+        "count-card":"17.688rem",
+        "sectional-underline":"9rem"
       }
     },
   },
