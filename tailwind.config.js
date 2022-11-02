@@ -27,6 +27,7 @@ module.exports = {
         900:"#000000"
       },
       'grey':{
+        100:"#F7F7F7",
         500:"#5F5F5F",
         600:"#0F0F0F"
       }
@@ -46,7 +47,8 @@ module.exports = {
         "blog-card-sm":"17rem",
         "blog-card-md":"37.438rem",
         "subscribe-card":"23.375rem",
-        "15":"3.813rem"
+        "15":"3.813rem",
+        "footer-section":"37rem"
       },
       width:{
         "card":"23.5rem",
