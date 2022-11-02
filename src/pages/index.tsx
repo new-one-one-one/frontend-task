@@ -3,10 +3,14 @@ import Button from "../components/button";
 import ImageWithContent from "../components/contentOverImage";
 import ProductCard from "../components/productCard";
 import SectionalHeader from "../components/sectionHeader";
+import BlogCard from "../components/blogCard";
+
+import { blogs } from "../providers/data/blog";
 import { categories } from "../providers/data/categories";
 import { products } from "../providers/data/product";
 import { quatity } from "../providers/data/quantity";
-
+import {titles} from "./../providers/constants"
+import { BUTTON_SCHEME, SIZE, VARIANT } from "../providers/constants/enums";
 export const HomePage = () =>{
     return (
         <div className="flex justify-center items-center">
@@ -46,10 +50,7 @@ export const HomePage = () =>{
                         
                     </div>
                 </div>
-                <SectionalHeader
-                    title="Our Brands"
-                    isUnderlined
-                />
+                
                 <div>
                     <div className="grid grid-cols-3 max-w-7xl md:grid-cols-3 gap-6">
                         {products.map((product) =>(
@@ -66,6 +67,40 @@ export const HomePage = () =>{
                                 </div> 
                             </React.Fragment>
                         ))}
+                    </div>
+                </div>
+                <div>
+                    <SectionalHeader
+                        title={titles.our_blogs}
+                        isUnderlined
+                    />
+                    <div className="grid grid-cols-2">
+                        <div>
+                            <BlogCard {...blogs.stay_healthy}/>
+                        </div>
+                        <div className="grid">
+                            <div>
+                                <BlogCard {...blogs.workout_for_beginners} />
+                            </div>
+                            <div className="-translate-y-2">
+                                <BlogCard {...blogs.cardio_important} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="bg bg-black-900 h-subscribe-card ml-3">
+                    <div className="grid grid-cols-3 gap-2 mt-28">
+                        <div className="text text-white-100 col-span-2 font-bold text-left text-6xl ml-28">
+                            Subscribe to Our <br/> newletter.
+                        </div>
+                        <div className="col-span-1 mt-16">
+                            <Button
+                                text={"Subscribe"}
+                                scheme={BUTTON_SCHEME.TERTIARY}
+                                variant={VARIANT.FILLED}
+                                size={SIZE.LARGE_MID}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
